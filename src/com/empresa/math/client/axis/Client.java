@@ -1,11 +1,16 @@
-package com.empresa.math.client;
+package com.empresa.math.client.axis;
 
 import java.rmi.RemoteException;
 
 public class Client {
 
+	
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		FibonacciServerProxy proxy = new FibonacciServerProxy();
+	
 		try {
 			System.out.println(proxy.fib(45));
 		} catch (FibException e) {

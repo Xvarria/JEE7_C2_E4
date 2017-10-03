@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<handler-chains xmlns:="http://java.sun.com/xml/ns/javaee">
+	<handler-chain>
+		<!-- :protocol-bindings>##SOAP12_HTTP</:protocol-bindings -->
+		<handler>
+		    <handler-name>com.empresa.math.client.jax.UUIDHandler</handler-name>
+			<handler-class>com.empresa.math.client.jax.UUIDHandler</handler-class>
+		</handler>
+		<!--:handler>
+			<:handler-class>fibC.ArgHandler</:handler-class>
+		</:handler -->
+	</handler-chain>
+</handler-chains>

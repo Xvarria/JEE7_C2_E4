@@ -1,6 +1,6 @@
 eclipse.preferences.version=1
-encoding//src/com/empresa/math/client/FibException.java=UTF-8
-encoding//src/com/empresa/math/client/FibonacciServer.java=UTF-8
-encoding//src/com/empresa/math/client/FibonacciServerPortBindingStub.java=UTF-8
-encoding//src/com/empresa/math/client/FibonacciServerService.java=UTF-8
-encoding//src/com/empresa/math/client/FibonacciServerServiceLocator.java=UTF-8
+encoding//src/com/empresa/math/client/axis/FibException.java=UTF-8
+encoding//src/com/empresa/math/client/axis/FibonacciServer.java=UTF-8
+encoding//src/com/empresa/math/client/axis/FibonacciServerPortBindingStub.java=UTF-8
+encoding//src/com/empresa/math/client/axis/FibonacciServerService.java=UTF-8
+encoding//src/com/empresa/math/client/axis/FibonacciServerServiceLocator.java=UTF-8

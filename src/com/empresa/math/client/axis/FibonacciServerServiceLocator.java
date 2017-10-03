@@ -5,11 +5,16 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package com.empresa.math.client;
+package com.empresa.math.client.axis;
 
-public class FibonacciServerServiceLocator extends org.apache.axis.client.Service implements com.empresa.math.client.FibonacciServerService {
+public class FibonacciServerServiceLocator extends org.apache.axis.client.Service implements com.empresa.math.client.axis.FibonacciServerService {
 
-    public FibonacciServerServiceLocator() {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public FibonacciServerServiceLocator() {
     }
 
 
@@ -39,7 +44,7 @@ public class FibonacciServerServiceLocator extends org.apache.axis.client.Servic
         FibonacciServerPortWSDDServiceName = name;
     }
 
-    public com.empresa.math.client.FibonacciServer getFibonacciServerPort() throws javax.xml.rpc.ServiceException {
+    public com.empresa.math.client.axis.FibonacciServer getFibonacciServerPort() throws javax.xml.rpc.ServiceException {
        java.net.URL endpoint;
         try {
             endpoint = new java.net.URL(FibonacciServerPort_address);
@@ -50,9 +55,9 @@ public class FibonacciServerServiceLocator extends org.apache.axis.client.Servic
         return getFibonacciServerPort(endpoint);
     }
 
-    public com.empresa.math.client.FibonacciServer getFibonacciServerPort(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
+    public com.empresa.math.client.axis.FibonacciServer getFibonacciServerPort(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
         try {
-            com.empresa.math.client.FibonacciServerPortBindingStub _stub = new com.empresa.math.client.FibonacciServerPortBindingStub(portAddress, this);
+            com.empresa.math.client.axis.FibonacciServerPortBindingStub _stub = new com.empresa.math.client.axis.FibonacciServerPortBindingStub(portAddress, this);
             _stub.setPortName(getFibonacciServerPortWSDDServiceName());
             return _stub;
         }
@@ -72,8 +77,8 @@ public class FibonacciServerServiceLocator extends org.apache.axis.client.Servic
      */
     public java.rmi.Remote getPort(Class serviceEndpointInterface) throws javax.xml.rpc.ServiceException {
         try {
-            if (com.empresa.math.client.FibonacciServer.class.isAssignableFrom(serviceEndpointInterface)) {
-                com.empresa.math.client.FibonacciServerPortBindingStub _stub = new com.empresa.math.client.FibonacciServerPortBindingStub(new java.net.URL(FibonacciServerPort_address), this);
+            if (com.empresa.math.client.axis.FibonacciServer.class.isAssignableFrom(serviceEndpointInterface)) {
+                com.empresa.math.client.axis.FibonacciServerPortBindingStub _stub = new com.empresa.math.client.axis.FibonacciServerPortBindingStub(new java.net.URL(FibonacciServerPort_address), this);
                 _stub.setPortName(getFibonacciServerPortWSDDServiceName());
                 return _stub;
             }

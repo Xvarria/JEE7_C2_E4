@@ -5,9 +5,9 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package com.empresa.math.client;
+package com.empresa.math.client.axis;
 
-public class FibonacciServerPortBindingStub extends org.apache.axis.client.Stub implements com.empresa.math.client.FibonacciServer {
+public class FibonacciServerPortBindingStub extends org.apache.axis.client.Stub implements com.empresa.math.client.axis.FibonacciServer {
     private java.util.Vector cachedSerClasses = new java.util.Vector();
     private java.util.Vector cachedSerQNames = new java.util.Vector();
     private java.util.Vector cachedSerFactories = new java.util.Vector();
@@ -73,7 +73,7 @@ public class FibonacciServerPortBindingStub extends org.apache.axis.client.Stub 
             java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
             qName = new javax.xml.namespace.QName("http://server.math.empresa.com/", "FibException");
             cachedSerQNames.add(qName);
-            cls = com.empresa.math.client.FibException.class;
+            cls = com.empresa.math.client.axis.FibException.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
@@ -144,7 +144,7 @@ public class FibonacciServerPortBindingStub extends org.apache.axis.client.Stub 
         }
     }
 
-    public int fib(int arg0) throws java.rmi.RemoteException, com.empresa.math.client.FibException {
+    public int fib(int arg0) throws java.rmi.RemoteException, com.empresa.math.client.axis.FibException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -178,8 +178,8 @@ public class FibonacciServerPortBindingStub extends org.apache.axis.client.Stub 
         if (axisFaultException.detail instanceof java.rmi.RemoteException) {
               throw (java.rmi.RemoteException) axisFaultException.detail;
          }
-        if (axisFaultException.detail instanceof com.empresa.math.client.FibException) {
-              throw (com.empresa.math.client.FibException) axisFaultException.detail;
+        if (axisFaultException.detail instanceof com.empresa.math.client.axis.FibException) {
+              throw (com.empresa.math.client.axis.FibException) axisFaultException.detail;
          }
    }
   throw axisFaultException;

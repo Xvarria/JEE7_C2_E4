@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package com.empresa.math.client;
+package com.empresa.math.client.axis;
 
 public class FibException  extends org.apache.axis.AxisFault  implements java.io.Serializable {
     private java.lang.String message1;
