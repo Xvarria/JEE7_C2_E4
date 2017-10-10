@@ -3,9 +3,13 @@
 	<handler-chain>
 		<!-- :protocol-bindings>##SOAP12_HTTP</:protocol-bindings -->
 		<handler>
-		    <handler-name>com.empresa.math.client.jax.UUIDHandler</handler-name>
-			<handler-class>com.empresa.math.client.jax.UUIDHandler</handler-class>
+		    <handler-name>com.empresa.math.client.jax.handlers.UUIDHandler</handler-name>
+			<handler-class>com.empresa.math.client.jax.handlers.UUIDHandler</handler-class>
 		</handler>
+		<handler>
+		    <handler-name>com.empresa.math.client.jax.handlers.NegativeHandler</handler-name>
+			<handler-class>com.empresa.math.client.jax.handlers.NegativeHandler</handler-class>
+		</handler>		
 		<!--:handler>
 			<:handler-class>fibC.ArgHandler</:handler-class>
 		</:handler -->

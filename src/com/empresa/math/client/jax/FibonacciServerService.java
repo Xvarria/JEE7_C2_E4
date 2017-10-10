@@ -19,7 +19,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "FibonacciServerService", targetNamespace = "http://server.math.empresa.com/", wsdlLocation = "http://192.168.30.90:9876/fib?wsdl")
+@WebServiceClient(name = "FibonacciServerService", targetNamespace = "http://server.math.empresa.com/", wsdlLocation = "http://192.168.30.178:9876/fib?wsdl")
 @HandlerChain(file = "handler-chain.xml")
 public class FibonacciServerService
     extends Service
@@ -33,7 +33,7 @@ public class FibonacciServerService
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://192.168.30.90:9876/fib?wsdl");
+            url = new URL("http://192.168.30.178:9876/fib?wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }

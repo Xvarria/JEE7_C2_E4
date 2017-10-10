@@ -1,4 +1,4 @@
-package com.empresa.math.client.jax;
+package com.empresa.math.client.jax.handlers;
 import java.io.IOException;
 import java.util.Set;
 import java.util.UUID;
@@ -18,7 +18,7 @@ import javax.xml.ws.handler.soap.SOAPMessageContext;
 public class UUIDHandler implements SOAPHandler<SOAPMessageContext> {
 	private static final String LoggerName = "ClientSideLogger";
 	private Logger logger;
-	private final boolean log_p = true; // set to false to turn off
+	private static final boolean LOG_ON = true; // set to false to turn off
 
 	public UUIDHandler() {
 		logger = Logger.getLogger(LoggerName);
@@ -26,13 +26,12 @@ public class UUIDHandler implements SOAPHandler<SOAPMessageContext> {
 
 	@Override
 	public boolean handleMessage(SOAPMessageContext ctx) {
-		if (log_p)
-			logger.info("handleMessage");
+		if (LOG_ON)
+			logger.info("handle SOAP Message");
 		
 		// Handler maneja tanto IN/OUT necesitamos saber si esto es una salida
 		// desde la perspectiva del cliente
 		Boolean request_p = (Boolean) ctx.get(MessageContext.MESSAGE_OUTBOUND_PROPERTY);
-		
 		
 		// Manipula SOAP solamente si es un request
 		if (request_p) {
@@ -70,8 +69,8 @@ public class UUIDHandler implements SOAPHandler<SOAPMessageContext> {
 
 	@Override
 	public boolean handleFault(SOAPMessageContext ctx) {
-		if (log_p)
-			logger.info("handleFault");
+		if (LOG_ON)
+			logger.info("handle SOAP Fault");
 		try {
 			ctx.getMessage().writeTo(System.out);
 		} catch (SOAPException e) {
@@ -84,14 +83,14 @@ public class UUIDHandler implements SOAPHandler<SOAPMessageContext> {
 
 	@Override
 	public void close(MessageContext context) {
-		if (log_p)
-			logger.info("close");
+		if (LOG_ON)
+			logger.info("close SOAP Handler");
 
 	}
 
 	@Override
 	public Set<QName> getHeaders() {
-		if (log_p)
+		if (LOG_ON)
 			logger.info("getHeaders");
 		return null;
 	}
