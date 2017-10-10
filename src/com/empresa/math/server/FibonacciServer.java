@@ -4,6 +4,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.jws.HandlerChain;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
@@ -12,6 +13,7 @@ import javax.jws.soap.SOAPBinding;
 @SOAPBinding(style = SOAPBinding.Style.DOCUMENT, 
              use = SOAPBinding.Use.LITERAL, 
              parameterStyle = SOAPBinding.ParameterStyle.WRAPPED)
+@HandlerChain(file = "handler-chain.xml")
 public class FibonacciServer {
 
 	/** Cache */

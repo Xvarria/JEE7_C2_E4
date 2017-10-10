@@ -1,6 +1,8 @@
 
 package com.empresa.math.client.jax;
 
+import static com.empresa.math.client.jax.ServiceConstant.WSDL_ADDRESS;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -19,7 +21,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "FibonacciServerService", targetNamespace = "http://server.math.empresa.com/", wsdlLocation = "http://192.168.30.178:9876/fib?wsdl")
+@WebServiceClient(name = "FibonacciServerService", targetNamespace = "http://server.math.empresa.com/", wsdlLocation = WSDL_ADDRESS)
 @HandlerChain(file = "handler-chain.xml")
 public class FibonacciServerService
     extends Service
@@ -33,7 +35,7 @@ public class FibonacciServerService
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://192.168.30.178:9876/fib?wsdl");
+            url = new URL(WSDL_ADDRESS);
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }

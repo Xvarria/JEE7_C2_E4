@@ -14,9 +14,9 @@ public class Client {
 		try {
 			System.out.println(proxy.fib(45));
 		} catch (FibException e) {
-			System.err.println("Fib Exception" + e.getMessage1());
+			System.err.println("Fib Exception: " + e.getMessage1());
 		} catch (RemoteException e){
-			System.err.println("RemoteException Exception");
+			System.err.println("RemoteException Exception: " + e.getMessage());
 		}
 	}
 

@@ -7,6 +7,8 @@
 
 package com.empresa.math.client.axis;
 
+import static com.empresa.math.client.jax.ServiceConstant.SERVICE_URL;
+
 public class FibonacciServerServiceLocator extends org.apache.axis.client.Service implements com.empresa.math.client.axis.FibonacciServerService {
 
     /**
@@ -27,7 +29,7 @@ public class FibonacciServerServiceLocator extends org.apache.axis.client.Servic
     }
 
     // Use to get a proxy class for FibonacciServerPort
-    private java.lang.String FibonacciServerPort_address = "http://192.168.30.90:9876/fib";
+    private java.lang.String FibonacciServerPort_address = SERVICE_URL;
 
     public java.lang.String getFibonacciServerPortAddress() {
         return FibonacciServerPort_address;

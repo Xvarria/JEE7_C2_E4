@@ -24,9 +24,6 @@ public class NegativeHandler implements LogicalHandler<LogicalMessageContext> {
 
 	@Override
 	public boolean handleMessage(LogicalMessageContext context) {
-		if (LOG_ON)
-			logger.info("handle LOGIC Message");
-
 		// Handler maneja tanto IN/OUT necesitamos saber si esto es una salida
 		// desde la perspectiva del cliente
 		Boolean outboundP = (Boolean) context.get(MessageContext.MESSAGE_OUTBOUND_PROPERTY);
@@ -43,13 +40,13 @@ public class NegativeHandler implements LogicalHandler<LogicalMessageContext> {
 					if (payload instanceof JAXBElement) {
 						Object obj = ((JAXBElement) payload).getValue();
 						Fib fib = (Fib) obj;
-						int n = fib.getArg0(); //Current valuew
-						fib.setArg0(Math.abs(n)); //Make it non-negative
+						int n = fib.getArg0(); //Current value
+						fib.setArg0(Math.abs(n)); //Set make it non-negative
 						((JAXBElement) payload).setValue(fib);
 						msg.setPayload(payload, jabxCtx);
 					} 
 				} catch (JAXBException e) {
-					System.err.println("Exception error> "+e.getMessage());
+					System.err.println("Exception error: "+e.getMessage());
 				}
 			
 

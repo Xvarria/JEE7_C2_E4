@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<handler-chains xmlns:="http://java.sun.com/xml/ns/javaee">
+	<handler-chain>
+		<!-- :protocol-bindings>##SOAP12_HTTP</:protocol-bindings -->
+		<handler>
+		    <handler-name>com.empresa.math.server.UUIDValidator</handler-name>
+			<handler-class>com.empresa.math.server.UUIDValidator</handler-class>
+		</handler>
+	</handler-chain>
+</handler-chains>
